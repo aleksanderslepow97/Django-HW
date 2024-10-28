@@ -1,12 +1,7 @@
-# Интернет магшазин
-## Описание:
-Интернет магазин
-## Установка:
-1. Клонируйте репозиторий:
+# Онлайн магазин
+
 ```
-https://github.com/Dimon4ik812/django_homework/tree/feature/homework_22
-```
-2. Установите зависимости:
+Установите зависимости:
 ```
 pip install poetry
 poetry install
