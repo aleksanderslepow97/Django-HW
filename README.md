@@ -1,4 +1,4 @@
-# Онлайн магазин!
+# Онлайн магазин
 
 ```
 Установите зависимости:
@@ -21,7 +21,6 @@ poetry add requests-mock
 Пример команды:
 ```
 flake8 module_name
-flake8 . (все модули)
 ```
 
 ## Test Coverage
