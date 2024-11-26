@@ -28,7 +28,7 @@ class Product(models.Model):
         "category",
         on_delete=models.SET_NULL,
         verbose_name="Категория",
-        help_text="Введите категорию",
+        help_text="Выберите категорию",
         related_name="products",
         null=True,
         blank=True,
