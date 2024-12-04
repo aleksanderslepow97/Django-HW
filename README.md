@@ -1,4 +1,4 @@
-#   DJANGO APPS 27
+#   DJANGO 28
 
 ## Сведения:
 
