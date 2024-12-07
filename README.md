@@ -1,34 +1,43 @@
-# Онлайн магазин!
+#   DJANGO APPS 27
 
-```
-Установите зависимости:
-```
-pip install poetry
-poetry install
-poetry add requests
-pip install pytest
-pip install  pytest-cov
-poetry add python-dotenv 
-poetry add --group lint mypy
-poetry add --group lint black
-poetry add --group lint isort
-poetry add --group lint flake8 
-poetry add requests-mock
+## Сведения:
 
-```
-## Тестирование
-С помощью линтеров mypy, black, flake8, isort можете проверить код на соответствие PEP8
-Пример команды:
-```
-flake8 module_name
-flake8 . (все модули)
-```
+* модулm manage.py в корне проекта
+* папка static
+* директория config
+* директория catalog
+* директория blogs
+* директория users
+* папка screenshots
+* папка media
 
-## Test Coverage
-При необходимости можете проверить с помощью команд:
-```
-poetry add --group dev pytest
-pytest --cov 
-```
+1. **catalog** содержит модули для функционирования приложения Catalog, шаблоны страниц, директорию с миграциями, директорию с кастомными командами
+
+2. **blogs** содержит модули для функционирования приложения Blogs, шаблоны страниц, директорию с миграциями
+
+3. **config** с основными настройками проекта
+
+4. **users** отвечает за логку работы с пользователем (регистрацию, авторизацию)
+
+4. **static** включает в себя папки со стилями и скриптами (CSS и JS)
+
+5. **screenshots** содержит скриншоты с вызовом команд из командной строки (для ДЗ)
+
+6. **media** содержит медиафайлы
 
 
+Приложение Catalog состоит из 4-х страниц:
+1. contacts.html
+2. home.html
+3. product_details.html
+4. products_list.html
+
+
+Приложение Blog содержит 4 рабочих шаблона:
+1. blog_list.html
+2. blog_detail.html
+3. blog_form.html
+4. blog_confirm_delete.html
+
+
+Запуск через модуль manage.py
