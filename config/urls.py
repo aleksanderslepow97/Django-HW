@@ -4,10 +4,10 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('catalog.urls', namespace='catalog')),
-    path('blogs/', include('blogs.urls', namespace='blogs')),
-    path('users/', include('users.urls', namespace='users')),
+    path("admin/", admin.site.urls),
+    path("", include("catalog.urls")),
+    path("", include("blog.urls")),
+    path("users/", include("accounts.urls")),
 ]
 
 if settings.DEBUG:
