@@ -1,13 +1,16 @@
-from operator import index
+from django.urls import path
 
-from django.urls import path, include
-from catalog.apps import CatalogConfig
-from catalog.views import home, contacts
-
-app_name = CatalogConfig.name
+from .views import (CatalogView, ContactsView, HomeView, ProductCreateView, ProductDeleteView, ProductDetailView,
+                    ProductUnpublishView, CatalogProductsView, ProductUpdateView)
 
 urlpatterns = [
-    path('home/', home, name='home'),
-    path('contacts/', contacts, name='contacts')
-
-    ]
+    path("", HomeView.as_view(), name="home"),
+    path("catalogs", CatalogView.as_view(), name="catalogs"),
+    path("catalog/<int:category_id>", CatalogProductsView.as_view(), name="catalog_products"),
+    path("product/add", ProductCreateView.as_view(), name="product_add"),
+    path("product/<int:pk>", ProductDetailView.as_view(), name="product"),
+    path("product/<int:pk>/delete", ProductDeleteView.as_view(), name="product_delete"),
+    path("product/<int:pk>/edit", ProductUpdateView.as_view(), name="product_update"),
+    path("product/<int:pk>/unpublish", ProductUnpublishView.as_view(), name="product_unpublish"),
+    path("contacts", ContactsView.as_view(), name="contacts"),
+]
